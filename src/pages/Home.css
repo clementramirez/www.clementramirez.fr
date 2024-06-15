@@ -1,0 +1,36 @@
+.custom-blockquote {
+    font-size: 1.5rem;
+  }
+  
+  .quote {
+    font-size: 6rem;
+    font-family: 'Comic Sans MS', cursive; /* You can change the font to match your design */
+    color: grey; /* You can change the color to match your design */
+  }
+
+.type::after {
+    content: '|';
+    animation: fade 1s infinite;
+}
+
+.typing-zone-div {
+    height: 40vh;
+    background: linear-gradient(to bottom, lightgray 80%, white 100%); 
+}
+
+.aboutme-zone-div {
+    height: 40vh;
+    background: linear-gradient(to bottom, white 80%, lightgray 100%); 
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

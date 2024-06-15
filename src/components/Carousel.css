@@ -1,0 +1,12 @@
+/* styles.css */
+.carousel-item {
+    height: 400px; /* Set the fixed height for the Carousel */
+    background-color: lightgrey;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zoom and crop the image to cover the entire area */
+  }
+  
