@@ -8,8 +8,8 @@ const StatusDot = ({ status }) => (
   <div className={`status-dot-${status}`}></div>
 );
 
-const ServiceCard = ({ logoSrc, title, subtitle, link}) => (
-  <Card className="col-3 m-3 card-hover-container" style={{ width: '18rem' }}>
+const ServiceCard = ({ logoSrc, title, subtitle, link, animationDelay}) => (
+  <Card className="col-3 m-3 card-hover-container" style={{ width: '18rem', animationDelay: `${animationDelay}s` }}>
     <Card.Img variant="top" src={logoSrc} />
     <Card.ImgOverlay className='d-flex justify-content-end'>
       <StatusDot status='ok'/>
@@ -38,7 +38,7 @@ const Services = () => {
       <div style={{ height: '100px' }}></div>
       <div className="row">
         {cardsData.map((card, index) => (
-          <ServiceCard key={index} logoSrc={card.logoSrc} title={card.title} subtitle={card.subtitle} link={card.link}/>
+          <ServiceCard key={index} logoSrc={card.logoSrc} title={card.title} subtitle={card.subtitle} link={card.link} animationDelay={index * 0.1} />
         ))}
       </div>
     </div>
